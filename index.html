@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Agata Perduta Portfolio</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        
+    </head>
+    
+    
+    <body>
+        <footer>
+             <div class='form-overlay'></div>
+<div class='icon fa fa-pencil' id='form-container'>
+  <span class='icon fa fa-close' id='form-close'></span>
+  <div id='form-content'>
+    <div id='form-head'>
+      <h1 class='pre'>Get in touch</h1>
+      <h1 class='post'>Thanks!</h1>
+    </div>
+    <form>
+      <input class='input name' name='user_name' placeholder='Your name please' type='text'>
+      <input class='input email' name='user_email' placeholder='A contact email' type='text'>
+      <select class='input select' name='subject'>
+        <option disabled=''>What shall we talk about?</option>
+        <option selected=''>About a new project</option>
+        <option>About a job opportunity</option>
+      </select>
+      <textarea class='input message' placeholder='How can I help?'></textarea>
+      <input class='input submit' type='submit' value='Send Message'>
+    </form>
+  </div>
+</div>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://codepen.io/woodwork/pen/XXZaGQ.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+        </footer>
+        <header>
+            <div class="navigation">
+
+      <div class="buttons">
+
+        <a href="#home" class="btn">
+          <i class="fa fa-home" aria-hidden="true"></i>
+          <span>Home</span>
+        </a>
+        <a href="#about" class="btn">
+          <i class="fa fa-user" aria-hidden="true"></i>
+          <span>About</span>
+        </a>
+        <a href="#works" class="btn">
+          <i class="fa fa-pencil" aria-hidden="true"></i>
+          <span>Works</span>
+        </a>
+
+      </div>
+
+    </div>
+            <script type="text/javascript">
+                function whichChild(elem){
+    var  i= 0;
+    while((elem=elem.previousSibling)!=null) ++i;
+    return i;
+}
+
+let buttons = document.querySelectorAll('.btn')
+let buttonsDiv = document.querySelector('.buttons')
+
+let colors = ["#3b3b3b", "#3b3b3b", "#e3393a"]
+
+buttons.forEach(button => {
+
+  button.addEventListener('click', (e)=>{
+
+
+    let active = e.target
+    if(active.tagName=='I') active = active.parentNode
+
+    let index = whichChild(active)
+    let color = colors[0]
+
+    if(index==3) color = colors[1]
+    else if(index==5) color = colors[2]
+    else if(index==7) color = colors[3]
+
+    document.body.style.background = color
+
+
+    buttons.forEach(btn => btn.classList.remove('active'))
+
+    active.classList.add('active')
+
+  })
+
+})
+
+document.querySelector('body').addEventListener('click', (e)=>{
+
+  if(! buttonsDiv.contains(e.target)) buttons.forEach(button => button.classList.remove('active'))
+
+})
+            </script>
+        </header>
+        
+        <main>
+        <section id="home" class="home">
+            <div class="me">
+            <h3 class="hello">Hello.
+            </h3>
+            <img src="img/portret.png" alt="me">
+            <h3>My name is Agata Perduta, I'm a graphic design student.</h3>
+            </div>
+        </section>
+        
+        <section id="about" class="about">
+            <div class="wrapper-story">
+            <h3 class="long">Long story short</h3>
+            <div class="timeline">
+            <div class="body">
+                <h4>07 March 2001</h4>
+                <p class="sto">I was born in a smal town Olsztyn in Poland. I always loved to draw. I've set myself a goal to become a professional Illustrator. </p>
+            </div>
+            
+            <div class="body">
+                <h4>02 February 2013</h4>
+                <p class="sto" style="transition-delay: 0ms;">I moved with my family to Hamburg, Germany. Soon after I started my education at Highschool and ended it in 2018.</p>
+            </div>
+
+            <div class="body" style="transition-delay: 0ms;">
+                <h4>16 August 2018</h4>
+                <p class="sto" style="transition-delay: 0ms;">Throughout my time studying Illustration by myself, I’ve realized I needed more then just tutorials on YouTube. I started my education at the School for Media and Communication BMK in Hamburg.</p>
+                </div>
+            </div>
+                </div>
+            
+        </section>
+        
+        <section class="skills">
+            <div class="cards">
+                
+            <div class="skill-card">
+  <header class="skill-card__header"><img class="skill-card__icon" src="https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg" alt="HTML5 Logo"/></header>
+  <section class="skill-card__body">
+    <h2 class="skill-card__title">html</h2><span class="skill-card__duration">2 years of experience</span>
+    <ul class="skill-card__knowledge">
+      <li>HTML5</li>
+    </ul>
+  </section>
+</div>
+                
+                <div class="skill-card">
+  <header class="skill-card__header"><img class="skill-card__icon" src="img/css-png-1.png" alt="HTML5 Logo"/></header>
+  <section class="skill-card__body">
+    <h2 class="skill-card__title">css</h2><span class="skill-card__duration">2 years of experience</span>
+    <ul class="skill-card__knowledge">
+      <li>CSS3</li>
+    </ul>
+  </section>
+</div>
+                
+                <div class="skill-card">
+  <header class="skill-card__header"><img class="skill-card__icon" src="http://static.wixstatic.com/media/7f71db_bbf5f316b22f46c5a96040b6856b7056.png" alt="Ps Logo"/></header>
+  <section class="skill-card__body">
+    <h2 class="skill-card__title">photoshop</h2><span class="skill-card__duration">4 years of experience</span>
+    <ul class="skill-card__knowledge">
+      <li>Adobe Photoshop</li>
+    </ul>
+  </section>
+</div>
+                
+                <div class="skill-card">
+  <header class="skill-card__header"><img class="skill-card__icon" src="data:image/png;base64,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" alt="illustrator Logo"/></header>
+  <section class="skill-card__body">
+    <h2 class="skill-card__title">Ilustrator</h2><span class="skill-card__duration">1 year of experience</span>
+    <ul class="skill-card__knowledge">
+      <li>Adobe Illustrator</li>
+    </ul>
+  </section>
+</div>
+                
+                <div class="skill-card">
+  <header class="skill-card__header"><img class="skill-card__icon" src="https://cdn.freebiesupply.com/logos/large/2x/indesign-cc-logo-png-transparent.png" alt="indesign Logo"/></header>
+  <section class="skill-card__body">
+    <h2 class="skill-card__title">InDesign</h2><span class="skill-card__duration">1 year of experience</span>
+    <ul class="skill-card__knowledge">
+      <li>Adobe InDesign</li>
+    </ul>
+  </section>
+</div>
+                
+            </div>
+            
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
+        </section>
+        
+        <section id="works" class="works">
+            <div class="page-wrap">
+
+  <div id="home-slider">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide swiper-slide-one">
+          <div class="swiper-image" data-swiper-parallax-y="-20%">
+            <div class="swiper-image-inner swiper-image-left swiper-image-one">
+              <h5>Digital <span class="emphasis">Illustrations</span> <br><span><a class="lido" href="digital_illustrations.html">Show more</a></span></h5>
+            </div>
+          </div>
+          <div class="swiper-image" data-swiper-parallax-y="35%">
+            <div class="swiper-image-inner swiper-image-right swiper-image-two">
+              <p class="paragraph">
+                It was always my dream to become a professional Illustrator (concept artist to be precise). For the last 5 years I've been improving my skills in digital art and I'm willing to do so for my whole life. For now I'm not so proud of my work, but there are still so many things I can learn.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide swiper-slide-two">
+          <div class="swiper-image" data-swiper-parallax-y="-20%">
+            <div class="swiper-image-inner swiper-image-left swiper-image-three">
+              <h5>Traditional <span class="emphasis">Drawings</span><br><span><a class="lido" href="traditional_drawings.html">Show more</a></span></h5>
+            </div>
+          </div>
+          <div class="swiper-image" data-swiper-parallax-y="35%">
+            <div class="swiper-image-inner swiper-image-right swiper-image-four">
+              <p class="paragraph">
+                  Drawing was always my passion, I don't even remember when I got so addicted to it. I was drawing in school, in my free time or just throughout the night. Till now I've learned everything by myself and I hope you'll like it!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide swiper-slide-three">
+          <div class="swiper-image" data-swiper-parallax-y="-20%">
+            <div class="swiper-image-inner swiper-image-left swiper-image-five">
+              <h5> Logo<span class="emphasis">& Graphics</span><br><span><a class="lido" href="logo_graphics.html">Show more</a></span></h5>
+            </div>
+          </div>
+          <div class="swiper-image" data-swiper-parallax-y="35%">
+            <div class="swiper-image-inner swiper-image-right swiper-image-six">
+              <p class="paragraph">
+                Graphic design is sure a new thing I've started to learn about. Because I'm a Screen-Design student I have learned the ins and outs of design software such as Photoshop, InDesign and Adobe Illustrator, using it to create some of my works which you can find here in this section. Currently I'm working with a Youtube channel: <a  class="mystery"href="https://www.youtube.com/user/1mysterytv">MysteryTV</a> with 51K subscribers.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+
+</div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js'></script>
+            
+    <script  src="js/slider.js"></script>
+            
+        </section>
+            </main>
+    </body>
+</html>
