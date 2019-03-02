@@ -112,6 +112,9 @@ li{
     align-content: center;
     align-self: center
 }
+.date{
+    color: #464646;
+}
 .body{
     flex: 1 1 25%;
     margin: 10px;
@@ -125,6 +128,7 @@ li{
     transition: .5s;
 }
 .body:hover{
+    color: white;
     background: #464646;
 }
 
